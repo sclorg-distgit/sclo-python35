@@ -18,14 +18,14 @@
  %endif
 %endif
 
-%{?scl:          %scl_package        python-py}
+%{?scl:          %scl_package        python-itsdangerous}
 %{!?scl:         %global pkg_name    %{name}}
 
 %global upstream_name itsdangerous
 
 Name:           %{?sub_prefix}python-%{upstream_name}
 Version:        0.24
-Release:        9%{?dist}
+Release:        9.1%{?dist}
 Summary:        Python library for passing trusted data to untrusted environments
 License:        BSD
 URL:            http://pythonhosted.org/itsdangerous/
