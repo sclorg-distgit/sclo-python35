@@ -37,7 +37,7 @@
 
 Name:           %{?sub_prefix}python-%{srcname}
 Version:        1.4.34
-Release:        1.2%{?dist}
+Release:        1.3%{?dist}
 Summary:        Library with cross-python path, ini-parsing, io, code, log facilities
 License:        MIT and Public Domain
 #               main package: MIT, except: doc/style.css: Public Domain
@@ -80,7 +80,7 @@ following tools and modules:
 
 %package -n %{?sub_prefix}python3-%{srcname}
 Summary:        Library with cross-python path, ini-parsing, io, code, log facilities
-Requires:       %{?scl_prefix}python3-setuptools
+Requires:       %{?scl_prefix}python-setuptools
 %if !0%{?scl:1}
 %{?python_provide:%python_provide %{?scl_prefix}python3-%{srcname}}
 Provides:       bundled(python3-apipkg) = 1.3.dev
