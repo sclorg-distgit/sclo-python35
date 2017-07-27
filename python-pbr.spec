@@ -26,7 +26,7 @@
 
 Name:           %{?sub_prefix}python-%{pypi_name}
 Version:        1.10.0
-Release:        4%{?dist}
+Release:        4.1%{?dist}
 Summary:        Python Build Reasonableness
 
 License:        ASL 2.0
@@ -102,6 +102,7 @@ rm -rf %{buildroot}%{python_sitelib}/pbr/tests
 %endif
 
 %files 
+%{!?_licensedir:%global license %%doc}
 %license LICENSE
 %doc html README.rst
 %{_bindir}/pbr
