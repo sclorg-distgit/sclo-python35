@@ -22,14 +22,14 @@
 %{!?scl:         %global pkg_name    %{name}}
 
 %{?scl:
-%filter_from_provides s|/opt/rh/.*/root/usr/bin/python.*||g;
-%filter_from_requires s|/opt/rh/.*/root/usr/bin/python.*||g;
+%filter_from_provides s|/opt/rh/.*/root/usr/bin/python.*||g;s|python.*abi.*$||g;
+%filter_from_requires s|/opt/rh/.*/root/usr/bin/python.*||g;s|python.*abi.*$||g;
 %filter_setup
 }
 
 Name:           %{?sub_prefix}pyflakes
 Version:        1.5.0
-Release:        4%{?dist}
+Release:        4.1%{?dist}
 Summary:        A simple program which checks Python source files for errors
 
 License:        MIT
