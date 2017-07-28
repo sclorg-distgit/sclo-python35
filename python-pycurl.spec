@@ -23,7 +23,7 @@
 
 %{?scl:
 %filter_from_provides s|pycurl.so.*||g;
-%filter_from_requires s|libpython.*so.*||g;
+%filter_from_requires s|libpython.*so.*||g;s|python.*abi.*||g;
 %filter_setup
 }
 
@@ -32,7 +32,7 @@
 
 Name:           %{?sub_prefix}python-%{modname}
 Version:        7.43.0
-Release:        6%{?dist}
+Release:        6.1%{?dist}
 Summary:        A Python interface to libcurl
 
 License:        LGPLv2+ or MIT
