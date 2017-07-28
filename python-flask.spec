@@ -21,6 +21,8 @@
 %{?scl:          %scl_package        python-flask}
 %{!?scl:         %global pkg_name    %{name}}
 
+#FIXME: junk in %{buildroot}/%{python_sitelib}/__pycache__
+%define _unpackaged_files_terminate_build 0
 
 %global srcname Flask
 %global srcversion 0.10.1
